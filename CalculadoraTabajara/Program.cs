@@ -13,8 +13,8 @@
                 Console.WriteLine("Digite 2 para Subtrair");
                 Console.WriteLine("Digite 3 para Multiplicar");
                 Console.WriteLine("Digite 4 para Dividir");
-                Console.WriteLine("Digite 5 para visualizar o histórico");
-                Console.WriteLine("Digite S para sair");
+                Console.WriteLine("Digite 5 para Visualizar o histórico");
+                Console.WriteLine("Digite S para Sair");
 
                 string operacao = "";
                 string operador = "";
@@ -102,8 +102,9 @@
 
                 }
                 Console.Clear();
+                string mensagemHistorico = $"{numero1} {operador} {numero2} = {resultado}";
+                historico.Add(mensagemHistorico);
                 string mensagem = $"O resultado da {operacao} é de {resultado}";
-                historico.Add(mensagem);
                 Console.WriteLine(mensagem);
                 Console.ReadLine();
             }
