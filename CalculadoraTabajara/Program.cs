@@ -8,7 +8,7 @@
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Calculdora Tabajara");
+                Console.WriteLine("Calculdora Tabajara\n");
                 Console.WriteLine("Digite 1 para Adição");
                 Console.WriteLine("Digite 2 para Subtrair");
                 Console.WriteLine("Digite 3 para Multiplicar");
@@ -16,8 +16,8 @@
                 Console.WriteLine("Digite 5 para visualizar o histórico");
                 Console.WriteLine("Digite S para sair");
 
-                string operacao;
-                string operador;
+                string operacao = "";
+                string operador = "";
                 string opcao = Console.ReadLine();
                 if (opcao == "S" || opcao == "s")
                 {
@@ -34,10 +34,12 @@
                 switch (opcao)
                 {
                     case "1": operacao = "Adição"; operador = "+"; break;
-                    case "2": operacao = "Subtrair"; operador = "-"; break;
-                    case "3": operacao = "Multiplicar"; operador = "*"; break;
-                    case "4": operacao = "Dividir"; operador = "/"; break;
+                    case "2": operacao = "Subtração"; operador = "-"; break;
+                    case "3": operacao = "Multiplicação"; operador = "*"; break;
+                    case "4": operacao = "Divisão"; operador = "/"; break;
                     case "5":
+                        Console.Clear();
+                        Console.WriteLine("Visualizando histórico");
                         foreach (string op in historico)
                         {
                             Console.WriteLine(op);
@@ -46,10 +48,11 @@
                         continue;
 
                 }
-
-                Console.Write("Digite o primeiro número");
+                Console.Clear();
+                Console.Write("Digite o primeiro número: ");
                 double numero1 = Convert.ToDouble(Console.ReadLine());
-                Console.Write("Digite o segundo número");
+                Console.WriteLine();
+                Console.Write("Digite o segundo número: ");
                 double numero2 = Convert.ToDouble(Console.ReadLine());
 
                 double resultado = 0;
@@ -59,8 +62,8 @@
                     case "1": resultado = numero1 + numero2; break;
                     case "2": resultado = numero1 - numero2; break;
                     case "3": resultado = numero1 * numero2; break;
-                    case "4": 
-                        if(numero2 > 0)
+                    case "4":
+                        if (numero2 > 0)
                             resultado = numero1 / numero2;
                         else
                         {
@@ -70,7 +73,11 @@
                         break;
 
                 }
-
+                Console.Clear();
+                string mensagem = $"O resultado da {operacao} é de {resultado}";
+                historico.Add(mensagem);
+                Console.WriteLine(mensagem);
+                Console.ReadLine();
             }
         }
     }
