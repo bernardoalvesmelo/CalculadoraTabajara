@@ -52,14 +52,22 @@
                 Console.Write("Digite o segundo número");
                 double numero2 = Convert.ToDouble(Console.ReadLine());
 
-                double resultado;
+                double resultado = 0;
 
                 switch (opcao)
                 {
                     case "1": resultado = numero1 + numero2; break;
                     case "2": resultado = numero1 - numero2; break;
                     case "3": resultado = numero1 * numero2; break;
-                    case "4": resultado = numero1 / numero2; break;
+                    case "4": 
+                        if(numero2 > 0)
+                            resultado = numero1 / numero2;
+                        else
+                        {
+                            Console.WriteLine("Não pode dividir por zero");
+                            Console.ReadLine();
+                        }
+                        break;
 
                 }
 
