@@ -58,7 +58,7 @@
                     if (!Double.TryParse(Console.ReadLine(), out numero1))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Digite um numero!");
+                        Console.WriteLine("Digite um número!");
                         Console.ReadLine();
                         Console.ResetColor();
                         continue;
@@ -73,7 +73,7 @@
                     if (!Double.TryParse(Console.ReadLine(), out numero2))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Digite um numero!");
+                        Console.WriteLine("Digite um número!");
                         Console.ReadLine();
                         Console.ResetColor();
                         continue;
