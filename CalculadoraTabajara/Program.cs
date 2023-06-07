@@ -23,13 +23,22 @@
                 {
                     break;
                 }
+
+                if (opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "5")
+                {
+                    Console.WriteLine("Digite uma opção válida!");
+                    Console.ReadLine();
+                    continue;
+                }
+
                 switch (opcao)
                 {
                     case "1": operacao = "Adição"; operador = "+"; break;
                     case "2": operacao = "Subtrair"; operador = "-"; break;
                     case "3": operacao = "Multiplicar"; operador = "*"; break;
-                    case "4": operacao = "Dividir"; operador = "/"; break;
-                    case "5": foreach(string op in historico)
+                   case "4": operacao = "Dividir"; operador = "/"; break;
+                    case "5":
+                        foreach (string op in historico)
                         {
                             Console.WriteLine(op);
                         }
