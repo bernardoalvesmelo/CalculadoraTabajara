@@ -46,9 +46,31 @@
                         continue;
 
                 }
-                
+
+                Console.Write("Digite o primeiro número");
+                double numero1 = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Digite o segundo número");
+                double numero2 = Convert.ToDouble(Console.ReadLine());
+
+                double resultado;
+
+                switch (opcao)
+                {
+                    case "1": operacao = "Adição"; operador = "+"; break;
+                    case "2": operacao = "Subtrair"; operador = "-"; break;
+                    case "3": operacao = "Multiplicar"; operador = "*"; break;
+                    case "4": operacao = "Dividir"; operador = "/"; break;
+                    case "5":
+                        foreach (string op in historico)
+                        {
+                            Console.WriteLine(op);
+                        }
+                        Console.ReadLine();
+                        continue;
+
+
+                }
+
             }
-          
-        }
     }
 }
