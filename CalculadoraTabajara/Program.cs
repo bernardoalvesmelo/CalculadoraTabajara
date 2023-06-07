@@ -26,7 +26,9 @@
 
                 if (opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "5")
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Digite uma opção válida!");
+                    Console.ResetColor();
                     Console.ReadLine();
                     continue;
                 }
@@ -67,8 +69,10 @@
                             resultado = numero1 / numero2;
                         else
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Não pode dividir por zero");
                             Console.ReadLine();
+                            Console.ResetColor();
                         }
                         break;
 
