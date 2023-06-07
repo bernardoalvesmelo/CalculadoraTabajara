@@ -51,11 +51,35 @@
 
                 }
                 Console.Clear();
-                Console.Write("Digite o primeiro número: ");
-                double numero1 = Convert.ToDouble(Console.ReadLine());
+                double numero1 = 0;
+                while (true)
+                {
+                    Console.Write("Digite o primeiro número: ");
+                    if (!Double.TryParse(Console.ReadLine(), out numero1))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Digite um numero!");
+                        Console.ReadLine();
+                        Console.ResetColor();
+                        continue;
+                    }
+                    break;
+                }
                 Console.WriteLine();
-                Console.Write("Digite o segundo número: ");
-                double numero2 = Convert.ToDouble(Console.ReadLine());
+                double numero2 = 0;
+                while (true)
+                {
+                    Console.Write("Digite o segundo número: ");
+                    if (!Double.TryParse(Console.ReadLine(), out numero2))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Digite um numero!");
+                        Console.ReadLine();
+                        Console.ResetColor();
+                        continue;
+                    }
+                    break;
+                }
 
                 double resultado = 0;
 
@@ -74,7 +98,7 @@
                             Console.ReadLine();
                             Console.ResetColor();
                         }
-                        break;
+                        continue;
 
                 }
                 Console.Clear();
